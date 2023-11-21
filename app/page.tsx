@@ -2,8 +2,13 @@ import React from "react";
 
 function page() {
   return (
-    <div className="space-y-10 text-[#565869] h-screen flex flex-col justify-center items-center  ">
-      <h1 className="font-bold text-3xl">ChatGPT</h1>
+    <div className=" text-[#565869] h-screen flex flex-col justify-between items-center p-3  ">
+      <div className="text-white mr-auto cursor-pointer items-center gap-1 rounded-xl py-2 px-3 text-lg font-medium  hover:bg-black/10 radix-state-open:bg-black/20">
+        chatGPT 3.5
+      </div>
+      <h1 className="font-medium text-3xl text-white">
+        how can i help you today?
+      </h1>
 
       <div className="grid grid-cols-2 grid-rows-2 gap-3">
         <div className="infoText">
