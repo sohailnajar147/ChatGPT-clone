@@ -24,7 +24,7 @@ function NewChat() {
   return (
     <div
       onClick={createNewChat}
-      className="border border-[#4D4D4F] rounded-md p-2  flex items-center space-x-2 text-white hover:cursor-pointer"
+      className=" rounded-md p-2 hover:rounded-md hover:bg-gray-700/70 flex items-center space-x-2 text-white hover:cursor-pointer"
     >
       <PlusIcon className="h-4 w-4" />
       <p>New Chat</p>
