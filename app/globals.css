@@ -7,6 +7,26 @@
     @apply p-4 rounded-lg border border-[#565869] hover:bg-gray-600/50 hover:border-white max-w-xs hover:cursor-pointer font-medium
   }
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-transparent
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

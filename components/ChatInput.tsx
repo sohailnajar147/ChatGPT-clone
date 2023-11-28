@@ -61,10 +61,10 @@ function ChatInput({ chatId }: Props) {
   };
 
   return (
-    <div className="border-[#5D5E6A] rounded-2xl border text-white  ">
-      <form onSubmit={sendMessage} className="flex p-3 space-x-3 ">
+    <div className=" border-[#5D5E6A] rounded-2xl border text-white m-5 ">
+      <form onSubmit={sendMessage} className="flex p-3 space-x-3">
         <input
-          className="flex-1 w-full resize-none  focus:outline-none  bg-transparent "
+          className="flex-1 w-full resize-none focus:outline-none  bg-transparent "
           type="text"
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
