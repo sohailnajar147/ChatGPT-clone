@@ -1,9 +1,11 @@
 import { DocumentData } from "firebase/firestore";
+import { Suspense } from "react";
 type Props = {
   message: DocumentData;
+  hidden: boolean;
 };
 
-function Message({ message }: Props) {
+function Message({ message, hidden }: Props) {
   return (
     <div className="py-5">
       <div className="flex space-x-3 px-10 max-w-2xl mx-auto">

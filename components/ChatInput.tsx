@@ -5,12 +5,14 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
+import Loading from "./Loading";
 
 type Props = {
   chatId: string;
+  setHidden: (newValue: boolean) => void;
 };
 
-function ChatInput({ chatId }: Props) {
+function ChatInput({ chatId, setHidden }: Props) {
   const [prompt, setPrompt] = useState("");
   const { data: session } = useSession();
   const model = "text-davinci-003";
@@ -43,6 +45,7 @@ function ChatInput({ chatId }: Props) {
     );
     // toast notif
     const notification = toast.loading("chatGPT is thinking...");
+    setHidden(false);
     await fetch("/api/askQuestion", {
       method: "POST",
       headers: {
@@ -56,6 +59,7 @@ function ChatInput({ chatId }: Props) {
       }),
     }).then(() => {
       // success
+      setHidden(true);
       toast.success("chatGPT has responded", { id: notification });
     });
   };
